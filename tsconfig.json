@@ -1,21 +1,27 @@
 {
-    "compilerOptions": {
-        "outDir": "./build/",
-        "noImplicitAny": true,
-        "module": "ESNext",
-        "target": "es5",
-        "jsx": "react-jsx",
-        "allowJs": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+  "compilerOptions": {
+    "outDir": "./build/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
     },
-    "ts-node": {
-        "compilerOptions": {
-            "module": "commonjs"
-        },
-        "exclude": [
-            "node_modules"
-        ]
-    }
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    // "exclude": [
+    //   "node_modules"
+    // ]
+  }
 }

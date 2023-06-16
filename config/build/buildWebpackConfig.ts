@@ -1,9 +1,9 @@
 import webpack from 'webpack';
-import { BuildOptions } from './types/config';
-import { buildPlugins } from './buildPlugins';
-import { buidLoaders } from './buildLoaders';
-import { buildResolvers } from './buildResolvers';
 import { buildDevServer } from './buildDevServer';
+import { buidLoaders } from './buildLoaders';
+import { buildPlugins } from './buildPlugins';
+import { buildResolvers } from './buildResolvers';
+import { BuildOptions } from './types/config';
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
 
@@ -23,8 +23,8 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     module: {
       rules: buidLoaders(options),
     },
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildDevServer(options) : undefined
-  }
+  };
 }
