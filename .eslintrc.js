@@ -25,7 +25,8 @@ module.exports = {
     ],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
@@ -37,6 +38,9 @@ module.exports = {
     'jsx-quotes': ['warn', 'prefer-single'],
     'i18next/no-literal-string': ['error', { markupOnly: true }],
     'max-len': ['error', { ignoreComments: true, code: 120 }],
+    'react/jsx-no-useless-fragment': 'off',
+    'linebreak-style': 'off',
+    'comma-dangle': 'off'
   },
   globals: {
     __IS_DEV__: true,

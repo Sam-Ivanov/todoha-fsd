@@ -4,5 +4,9 @@
   "Язык": "English",
   "Главная": "Main",
   "О сайте": "About",
-  "toggle": "toggle"
+  "toggle": "toggle",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Unexpected error",
+  "Обновить страницу": "Refresh the page",
+  "throw error": "throw error"
 }
