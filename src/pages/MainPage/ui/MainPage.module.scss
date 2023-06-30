@@ -1,0 +1,34 @@
+.logo {
+  animation: myanimation 1.5s infinite ease-in-out;
+  width: 150px;
+  height: 150px;
+}
+
+@keyframes myanimation {
+  0% {
+    filter: drop-shadow(1px 1px 3px #b40be7);
+  }
+
+  20% {
+    filter: drop-shadow(1px 1px 8px #b40be7);
+  }
+
+  40% {
+    filter: drop-shadow(1px 1px 5px #b40be7);
+  }
+
+  60% {
+    filter: drop-shadow(1px 1px 8px #b40be7);
+  }
+
+  100% {
+    filter: drop-shadow(1px 1px 3px #b40be7);
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}

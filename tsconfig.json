@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
     "outDir": "./build/",
     "noImplicitAny": true,
     "module": "ESNext",
@@ -19,7 +20,7 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "commonjs"
+      "module": "commonjs",
     },
     // "exclude": [
     //   "node_modules"
