@@ -25,5 +25,8 @@
     // "exclude": [
     //   "node_modules"
     // ]
+    "include": [
+      "./config/jest/setupTests.ts"
+    ]
   }
 }
