@@ -14,7 +14,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next',
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
   ],
   rules: {
     // 'react/jsx-indent': [2, 4],
@@ -46,7 +50,10 @@ module.exports = {
     'max-len': ['error', { ignoreComments: true, code: 160 }],
     'react/jsx-no-useless-fragment': 'off',
     'linebreak-style': 'off',
-    'comma-dangle': 'off'
+    'comma-dangle': 'off',
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+    'no-param-reassign': 'off',
   },
   globals: {
     __IS_DEV__: true,

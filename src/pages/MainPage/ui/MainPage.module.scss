@@ -6,26 +6,26 @@
 
 @keyframes myanimation {
   0% {
-    filter: drop-shadow(3px 3px 3px #b40be7);
+    filter: drop-shadow(3px 3px 3px var(--shadow-logo-color));
   }
 
   20% {
-    filter: drop-shadow(3px 3px 7px #b40be7);
+    filter: drop-shadow(3px 3px 7px var(--shadow-logo-color));
     transform: scale(1.1);
   }
 
   40% {
-    filter: drop-shadow(3px 3px 5px #b40be7);
+    filter: drop-shadow(3px 3px 5px var(--shadow-logo-color));
     transform: scale(1.05);
   }
 
   60% {
-    filter: drop-shadow(3px 3px 7px #b40be7);
+    filter: drop-shadow(3px 3px 7px var(--shadow-logo-color));
     transform: scale(1.1);
   }
 
   100% {
-    filter: drop-shadow(3px 3px 3px #b40be7);
+    filter: drop-shadow(3px 3px 3px var(--shadow-logo-color));
   }
 }
 
