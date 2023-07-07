@@ -1,3 +1,4 @@
+import { LoginForm } from 'features/AuthByUsername/ui/LoginForm/LoginForm';
 import { useTranslation } from 'react-i18next';
 
 const AboutPage = () => {
@@ -6,6 +7,7 @@ const AboutPage = () => {
   return (
     <div>
       {t('О сайте')}
+      <LoginForm />
     </div>
   );
 };
