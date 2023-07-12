@@ -18,6 +18,9 @@ body {
 }
 
 .page-wrapper {
-  flex-grow: 1;
+  // flex-grow: 1;
   padding: 20px;
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid gray;
 }

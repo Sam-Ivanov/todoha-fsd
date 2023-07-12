@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next';
 
-const MainPage = () => {
-  const { t } = useTranslation('main');
+const SettingsPage = () => {
+  const { t } = useTranslation();
 
   return (
     <>
       {/* <BugButton /> */}
       <div>
-        {t('Главная страница')}
+        {t('Страница настроек')}
       </div>
       {/* <div className={cls.wrapper}>
         <LogoIcon className={classNames(cls.logo)} />
@@ -16,4 +16,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default SettingsPage;

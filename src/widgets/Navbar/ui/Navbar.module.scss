@@ -9,8 +9,18 @@
 
 .links {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .mainLink {
   margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  color: var(--bg-color);
+  font: var(--font-l);
 }
