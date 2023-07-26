@@ -5,8 +5,8 @@
 
 .items {
   position: absolute;
-  top: 70%;
-  right: 70%;
+  top: 60%;
+  right: 60%;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -32,15 +32,38 @@
 }
 
 .button {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
   color: var(--primary-color);
   background-color: var(--bg-color);
+  transition: 0.3s;
+
+  &:hover {
+    /* stylelint-disable-next-line color-function-notation */
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 10%);
+  }
 }
 
 .clearBtn {
   border: none;
+}
+
+.enter,
+.leave {
+  transition: 0.2s;
+}
+
+.enterFrom,
+.leaveTo {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.enterTo,
+.leaveFrom {
+  transform: scale(1);
+  opacity: 1;
 }

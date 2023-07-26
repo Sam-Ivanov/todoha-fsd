@@ -1,5 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
-import { Menu } from '@headlessui/react';
+import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import s from './DropdownMenu.module.scss';
@@ -20,35 +20,46 @@ export const DropdownMenu = (props: DropdownMenuProps) => {
   return (
     <Menu as='div' className={s.menu}>
       <Menu.Button className={s.button}>Ava</Menu.Button>
-      <Menu.Items className={s.items}>
-        {links.map((link) => (
-          <Menu.Item key={link.href} as={Fragment}>
-            {({ active }) => {
-              if (link.type === 'link') {
+      <Transition
+        enter={s.enter}
+        enterFrom={s.enterFrom}
+        enterTo={s.enterTo}
+        leave={s.leave}
+        leaveFrom={s.leaveFrom}
+        leaveTo={s.leaveTo}
+        as={Fragment}
+      >
+        <Menu.Items className={s.items}>
+          {links.map((link) => (
+            <Menu.Item key={link.href} as={Fragment}>
+              {({ active }) => {
+                if (link.type === 'link') {
+                  return (
+                    <a
+                      href={link.href}
+                      className={classNames(s.item, { [s.active]: active }, [])}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
                 return (
-                  <a
-                    href={link.href}
-                    className={classNames(s.item, { [s.active]: active }, [])}
+                  <button
+                    type='button'
+                    onClick={() => {
+                      console.log('qwe');
+                    }}
+                    className={classNames(s.item, { [s.active]: active }, [s.clearBtn])}
                   >
-                    {link.label}
-                  </a>
+                    click
+                  </button>
                 );
-              }
-              return (
-                <button
-                  type='button'
-                  onClick={() => {
-                    console.log('qwe');
-                  }}
-                  className={classNames(s.item, { [s.active]: active }, [s.clearBtn])}
-                >
-                  click
-                </button>
-              );
-            }}
-          </Menu.Item>
-        ))}
-      </Menu.Items>
+              }}
+            </Menu.Item>
+          ))}
+        </Menu.Items>
+
+      </Transition>
     </Menu>
   );
 };

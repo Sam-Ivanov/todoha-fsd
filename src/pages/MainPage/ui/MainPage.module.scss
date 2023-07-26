@@ -35,3 +35,26 @@
   align-items: center;
   height: auto;
 }
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+// table thead tr th {
+//   border: 1px solid black;
+// }
+
+th {
+  border: 1px solid black;
+}
+
+.tdTop {
+  border-bottom: 1px solid black;
+}
+
+.tdBottomLeft {
+  border-right: 1px solid black;
+  font-size: 10px;
+  line-height: 10px;
+}
